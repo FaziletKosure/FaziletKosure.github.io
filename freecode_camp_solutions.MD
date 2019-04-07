@@ -72,5 +72,131 @@ studlyCapVar = 10;
 properCamelCase = "A String";
 titleCaseOver = 9000;
 ```
+## exercise7 
+```js
+/*Number is a data type in JavaScript which represents numeric data.
+
+Now let's try to add two numbers using JavaScript.
+
+JavaScript uses the + symbol as addition operation when placed between two numbers.
+
+Example
+
+myVar = 5 + 10; // assigned 15*/
+//Change the 0 so that sum will equal 20.
+var sum = 10 + 10;
+```
+## exercise8 
+```js
+/*We can also subtract one number from another.
+
+JavaScript uses the - symbol for subtraction.
+
+Example
+
+myVar = 12 - 6; // assigned 6*/
+//Change the 0 so the difference is 12.
+var difference = 45 - 33;
+```
+## exercise9 
+```js
+/*We can also multiply one number by another.
+
+JavaScript uses the * symbol for multiplication of two numbers.
+
+Example
+
+myVar = 13 * 13; // assigned 169*/
+//Change the 0 so that product will equal 80
+var product = 8 * 10;
+```
+## exercise10 
+```js
+/*We can also divide one number by another.
+
+JavaScript uses the / symbol for division.
+
+Example
+
+myVar = 16 / 2; // assigned 8*/
+//Change the 0 so that the quotient is equal to 2.
+var quotient = 66 / 33;
+```
+## exercise11 
+```js
+/*You can easily increment or add one to a variable with the ++ operator.
+
+i++;
+
+is the equivalent of
+
+i = i + 1;
+
+Note
+The entire line becomes i++;, eliminating the need for the equal sign.*/
+//Change the code to use the ++ operator on myVar.Hint
+//Learn more about Arithmetic operators - Increment (++).
+var myVar = 87;
+
+// Only change code below this line
+myVar ++;
+```
+## exercise12 
+```js
+/*You can easily decrement or decrease a variable by one with the -- operator.
+
+i--;
+
+is the equivalent of
+
+i = i - 1;
+
+Note
+The entire line becomes i--;, eliminating the need for the equal sign.*/
+//Change the code to use the ++ operator on myVar.Hint
+//Learn more about Arithmetic operators - Increment (++).
+var myVar = 87;
+
+// Change the code to use the -- operator on myVar.
+/*myVar should equal 10
+myVar = myVar - 1; should be changed
+Use the -- operator on myVar
+Do not change code above the line*/
+var myVar = 11;
+
+// Only change code below this line
+myVar --;
+myVar --;
+```
+## exercise13 
+```js
+/*We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
+
+Note
+Not all real numbers can accurately be represented in floating point. This can lead to rounding errors. Details Here.*/
+//Create a variable myDecimal and give it a decimal value with a fractional part (e.g. 5.7).
+var ourDecimal = 5.7;
+// Only change code below this line
+var myDecimal = 6.2;
+
+```
+## exercise14 
+```js
+/*In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
+
+Let's multiply two decimals together to get their product.*/
+//Change the 0.0 so that product will equal 5.0.
+var product = 2.0 * 0.0;
+var product = 2.0 * 2.5;
+```
+## exercise15 
+```js
+/*In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
+
+Let's multiply two decimals together to get their product.*/
+//Change the 0.0 so that product will equal 5.0.
+var product = 2.0 * 0.0;
+var product = 2.0 * 2.5;
+```
 
 
