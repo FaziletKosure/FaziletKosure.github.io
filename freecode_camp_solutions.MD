@@ -191,12 +191,177 @@ var product = 2.0 * 2.5;
 ```
 ## exercise15 
 ```js
-/*In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
-
-Let's multiply two decimals together to get their product.*/
-//Change the 0.0 so that product will equal 5.0.
-var product = 2.0 * 0.0;
-var product = 2.0 * 2.5;
+/*Now let's divide one decimal by another.*/
+//Change the 0.0 so that quotient will equal to 2.2.
+var quotient = 0.0 / 2.0; // Fix this line
+var quotient = 4.4 / 2.0; // Fix this line
 ```
+## exercise16 
+```js
+/*The remainder operator % gives the remainder of the division of two numbers.
+
+Example
+
+5 % 2 = 1 because
+Math.floor(5 / 2) = 2 (Quotient)
+2 * 2 = 4
+5 - 4 = 1 (Remainder)
+Usage
+In mathematics, a number can be checked to be even or odd by checking the remainder of the division of the number by 2.
+
+17 % 2 = 1 (17 is Odd)
+48 % 2 = 0 (48 is Even)
+Note
+The remainder operator is sometimes incorrectly referred to as the "modulus" operator. It is very similar to modulus, but does not work properly with negative numbers.*/
+//Set remainder equal to the remainder of 11 divided by 3 using the remainder (%) operator.
+var remainder;
+remainder=11%3;
+```
+## exercise17 
+```js
+/*In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
+
+myVar = myVar + 5;
+
+to add 5 to myVar. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.
+
+One such operator is the += operator.
+
+var myVar = 1;
+myVar += 5;
+console.log(myVar); // Returns 6*/
+//Convert the assignments for a, b, and c to use the += operator.
+/*a should equal 15
+b should equal 26
+c should equal 19
+You should use the += operator for each variable
+Do not modify the code above the line*/
+var a = 3;
+var b = 17;
+var c = 12;
+
+// Only modify code below this line
+
+a = a + 12;
+b = 9 + b;
+c = c + 7;
+a += 12;
+b += 9;
+c += 7;
+```
+## exercise18 
+```js
+/*Like the += operator, -= subtracts a number from a variable.
+
+myVar = myVar - 5;
+
+will subtract 5 from myVar. This can be rewritten as:
+
+myVar -= 5;*/
+//Convert the assignments for a, b, and c to use the -= operator.
+/*a should equal 5
+b should equal -6
+c should equal 2
+You should use the -= operator for each variable
+Do not modify the code above the lin*/
+var a = 11;
+var b = 9;
+var c = 3;
+
+// Only modify code below this line
+
+a = a - 6;
+b = b - 15;
+c = c - 1;
+a -=  6;
+b -= 15;
+c -= 1;
+```
+## exercise19 
+```js
+/*The *= operator multiplies a variable by a number.
+
+myVar = myVar * 5;
+
+will multiply myVar by 5. This can be rewritten as:
+
+myVar *= 5;*/
+//Convert the assignments for a, b, and c to use the *= operator.
+/*a should equal 25
+b should equal 36
+c should equal 46
+You should use the *= operator for each variable
+Do not modify the code above the line*/
+var a = 5;
+var b = 12;
+var c = 4.6;
+
+// Only modify code below this line
+
+a = a * 5;
+b = 3 * b;
+c = c * 10;
+a *= 5;
+b *= 3;
+c *= 10;
+```
+## exercise20 
+```js
+The /= operator divides a variable by another number.
+
+myVar = myVar / 5;
+
+Will divide myVar by 5. This can be rewritten as:
+
+myVar /= 5;*/
+//Convert the assignments for a, b, and c to use the /= operator.
+/*a should equal 4
+b should equal 27
+c should equal 3
+You should use the /= operator for each variable
+Do not modify the code above the line*/
+var a = 48;
+var b = 108;
+var c = 33;
+
+// Only modify code below this line
+
+a = a / 12;
+b = b / 4;
+c = c / 11;
+a /= 12;
+b /= 4;
+c /= 11;
+```
+## exercise21 
+```js
+The /= operator divides a variable by another number.
+
+myVar = myVar / 5;
+
+Will divide myVar by 5. This can be rewritten as:
+
+myVar /= 5;*/
+//Convert the assignments for a, b, and c to use the /= operator.
+/*a should equal 4
+b should equal 27
+c should equal 3
+You should use the /= operator for each variable
+Do not modify the code above the line*/
+var a = 48;
+var b = 108;
+var c = 33;
+
+// Only modify code below this line
+
+a = a / 12;
+b = b / 4;
+c = c / 11;
+a /= 12;
+b /= 4;
+c /= 11;
+```
+
+
 
 
