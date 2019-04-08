@@ -1036,27 +1036,588 @@ myLocalScope();
 ```
 ## exercise51
 ```js
-/*Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
+/*t is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
-Here is a function myTest with a local variable called loc.
+In this example:
 
-function myTest() {
-  var loc = "foo";
-  console.log(loc);
+var someVar = "Hat";
+function myFun() {
+  var someVar = "Head";
+  return someVar;
 }
-myTest(); // logs "foo"
-console.log(loc); // loc is not defined
-loc is not defined outside of the function.
 */
-//No global myVar variable Passed
-//Add a local myVar variable
-function myLocalScope() {
-  'use strict'; // you shouldn't need to edit this line
- var myVar = 5;
-  console.log(myVar);
+//Add a local variable to myOutfit function to override the value of outerWear with "sweater".
+/*Do not change the value of the global outerWear
+myOutfit should return "sweater"
+Do not change the return statement*/
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+  
+ var outerWear = "sweater";
+  
+  // Only change code above this line
+  return outerWear;
 }
-myLocalScope();
+
+myOutfit();
 ```
+## exercise52
+```js
+/*We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+
+Example
+
+function plusThree(num) {
+  return num + 3;
+}
+var answer = plusThree(5); // 8
+plusThree takes an argument for num and returns a value equal to num + 3.
+*/
+//Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value. See the last line in the editor for an example of how you can test your timesFive function.
+/*timesFive should be a function
+timesFive(5) should return 25
+timesFive(2) should return 10
+timesFive(0) should return 0*/
+// Example
+function minusSeven(num) {
+  return num - 7;
+}
+
+// Only change code below this line
+function timesFive(num) {
+  return num * 5;
+}
+timesFive(5);
+timesFive(2);
+timesFive(0);
+```
+## exercise53
+```js
+/*A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
+
+Example
+
+var sum = 0;
+function addSum(num) {
+  sum = sum + num;
+}
+var returnedValue = addSum(3); // sum will be modified but returned value is undefined
+addSum is a function without a return statement. The function will change the global sum variable but the returned value of the function is undefined
+*/
+//Create a function addFive without any arguments. This function adds 5 to the sum variable, but its returned value is undefined.
+/*addFive should be a function
+sum should be equal to 8
+Returned value from addFive should be undefined
+Inside of your functions, add 5 to the sum variable*/
+// Example
+var sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+var sum=8;
+function addFive(){
+  sum = sum +5;
+}
+
+
+// Only change code above this line
+var returnedValue = addFive();
+```
+## exercise54
+```js
+/*If you'll recall from our discussion of Storing Values with the Assignment Operator, everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.
+
+Assume we have pre-defined a function sum which adds two numbers together, then:
+
+ourSum = sum(5, 12);
+
+will call sum function, which returns a value of 17 and assigns it to ourSum variable.
+
+
+*/
+//Call the processArg function with an argument of 7 and assign its return value to the variable processed
+/*processed should have a value of 2
+You should assign processArg to processed*/
+// Example
+var changed = 0;
+
+function change(num) {
+  return (num + 5) / 3;
+}
+
+changed = change(10);
+
+// Setup
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+// Only change code below this line
+ processArg(7);
+var processed=processArg(7);
+
+```
+## exercise55
+```js
+/*In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+
+Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
+*/
+//Add the number to the end of the array, then remove the first element of the array.
+//The nextInLine function should then return the element that was removed.
+/*nextInLine([], 5) should return a number.
+nextInLine([], 1) should return 1
+nextInLine([2], 1) should return 2
+nextInLine([5,6,7,8,9], 1) should return 5
+After nextInLine(testArr, 10), testArr[4] should be 10*/
+function nextInLine(arr, item) {
+  // Your code here
+
+  var queue = arr.push(item);
+
+  var removeItem = arr.shift();
+
+  return removeItem;  // Change this line
+}
+
+// Test Setup
+var testArr = [1,2,3,4,5];
+
+// Display Code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6)); // Modify this line to test
+console.log("After: " + JSON.stringify(testArr));
+
+  nextInLine([], 5);
+  nextInLine([], 1);
+  nextInLine([2], 1);//2
+  nextInLine([5,6,7,8,9], 1);//5
+   nextInLine(testArr, 10), testArr[4];//10
+```
+## exercise56
+```js
+/*Another data type is the Boolean. Booleans may only be one of two values: true or false. They are basically little on-off switches, where true is "on" and false is "off." These two states are mutually exclusive.Note
+Boolean values are never written with quotes. The strings "true" and "false" are not Boolean and have no special meaning in JavaScript.
+*/
+//Add the number to the end of the array, then remove the first element of the array.
+//Modify the welcomeToBooleans function so that it returns true instead of false when the run button is clicked.
+/*The welcomeToBooleans() function should return a boolean (true/false) value.
+welcomeToBooleans() should return true.*/
+function welcomeToBooleans() {
+
+// Only change code below this line.
+
+return true; // Change this line
+
+// Only change code above this line.
+}
+welcomeToBooleans();
+```
+## exercise57
+```js
+/*If statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as Boolean conditions and they may only be true or false.
+
+When the condition evaluates to true, the program executes the statement inside the curly braces. When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.
+
+Pseudocode
+
+if (condition is true) {
+  statement is executed
+}
+Example
+
+function test (myCondition) {
+  if (myCondition) {
+     return "It was true";
+  }
+  return "It was false";
+}
+test(true); // returns "It was true"
+test(false); // returns "It was false"
+When test is called with a value of true, the if statement evaluates myCondition to see if it is true or not. Since it is true, the function returns "It was true". When we call test with a value of false, myCondition is not true and the statement in the curly braces is not executed and the function returns "It was false".
+*/
+//Create an if statement inside the function to return "Yes, that was true" if the parameter wasThatTrue is true and return "No, that was false" otherwise.
+/*trueOrFalse should be a function
+trueOrFalse(true) should return a string
+trueOrFalse(false) should return a string
+trueOrFalse(true) should return "Yes, that was true"
+trueOrFalse(false) should return "No, that was false"*/
+// Example
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) { 
+    return "Yes, it's true";
+  }
+  return "No, it's false";
+}
+
+// Setup
+function trueOrFalse(wasThatTrue) {
+
+  // Only change code below this line.
+  if (wasThatTrue){
+      return  "Yes, that was true";
+  }
+
+  return "No, that was false";
+  
+  // Only change code above this line.
+
+}
+
+// Change this value to test
+trueOrFalse(true);
+trueOrFalse(false);
+```
+## exercise58
+```js
+/*There are many Comparison Operators in JavaScript. All of these operators return a boolean true or false value.
+
+The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value at the right of the operator to a variable in the left.
+
+function equalityTest(myVal) {
+  if (myVal == 10) {
+     return "Equal";
+  }
+  return "Not Equal";
+}
+If myVal is equal to 10, the equality operator returns true, so the code in the curly braces will execute, and the function will return "Equal". Otherwise, the function will return "Not Equal".
+
+In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:
+
+1 == 1 // true
+1 == 2 // false
+1 == '1' // true
+"3" == 3 // true
+*/
+//Add the equality operator to the indicated line so that the function will return "Equal" when val is equivalent to 12
+/*testEqual(10) should return "Not Equal"
+Passed
+testEqual(12) should return "Equal"
+Passed
+testEqual("12") should return "Equal"
+Passed
+You should use the == operator*/
+// Setup
+function testEqual(val) {
+  if (val==12) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// Change this value to test
+testEqual(12);
+```
+## exercise59
+```js
+/*Strict equality (===) is the counterpart to the equality operator (==). However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+
+If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+
+Examples
+
+3 === 3 // true
+3 === '3' // false
+In the second example, 3 is a Number type and '3' is a String type.
+
+
+*/
+//Use the strict equality operator in the if statement so the function will return "Equal" when val is strictly equal to 7
+/*testStrict(10) should return "Not Equal"
+testStrict(7) should return "Equal"
+testStrict("7") should return "Not Equal"
+You should use the === operator*/
+// Setup
+function testStrict(val) {
+  if (val===7) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// Change this value to test
+testStrict(7);
+```
+## exercise60
+```js
+/*In the last two challenges, we learned about the equality operator (==) and the strict equality operator (===). Let's do a quick review and practice using these operators some more.
+
+If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values. However, the strict equality operator will compare both the data type and value as-is, without converting one type to the other.
+
+Examples
+
+3 == '3' // returns true because JavaScript performs type conversion from string to number
+3 === '3' // returns false because the types are different and type conversion is not performed
+Note
+In JavaScript, you can determine the type of a variable or a value with the typeof operator, as follows:
+
+typeof 3 // returns 'number'
+typeof '3' // returns 'string'
+*/
+//The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns "Equal" only when the values are strictly equal.
+/*compareEquality(10, "10") should return "Not Equal"
+Passed
+compareEquality("20", 20) should return "Not Equal"
+Passed
+You should use the === operator*/
+// Setup
+function compareEquality(a, b) {
+  if ("20" === 20) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// Change this value to test
+compareEquality("20",20 );
+```
+## exercise61
+```js
+/*The inequality operator (!=) is the opposite of the equality operator. It means "Not Equal" and returns false where equality would return true and vice versa. Like the equality operator, the inequality operator will convert data types of values while comparing.
+
+Examples
+
+1 != 2 // true
+1 != "1" // false
+1 != '1' // false
+1 != true // false
+0 != false // false
+*/
+//Add the inequality operator != in the if statement so that the function will return "Not Equal" when val is not equivalent to 99
+/*testNotEqual(99) should return "Equal"
+testNotEqual("99") should return "Equal"
+testNotEqual(12) should return "Not Equal"
+testNotEqual("12") should return "Not Equal"
+testNotEqual("bob") should return "Not Equal"
+You should use the != operator*/
+// Setup
+function testNotEqual(val) {
+  if (val!=99) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// Change this value to test
+testNotEqual(10);
+```
+## exercise62
+```js
+/*The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. Strict inequality will not convert data types.
+
+Examples
+
+3 !== 3 // false
+3 !== '3' // true
+4 !== 3 // true
+*/
+//Add the strict inequality operator to the if statement so the function will return "Not Equal" when val is not strictly equal to 17
+/*testStrictNotEqual(17) should return "Equal"
+testStrictNotEqual("17") should return "Not Equal"
+testStrictNotEqual(12) should return "Not Equal"
+testStrictNotEqual("bob") should return "Not Equal"
+You should use the !== operator*/
+// Setup
+function testStrictNotEqual(val) {
+  // Only Change Code Below this Line
+  
+  if (val !==17) {
+
+  // Only Change Code Above this Line
+
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// Change this value to test
+testStrictNotEqual(10);
+```
+## exercise63
+```js
+/*The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false.
+
+Like the equality operator, greater than operator will convert data types of values while comparing.
+
+Examples
+
+5 > 3 // true
+7 > '3' // true
+2 > 3 // false
+'1' > 9 // false
+*/
+//Add the greater than operator to the indicated lines so that the return statements make sense.
+/*testGreaterThan(0) should return "10 or Under"
+testGreaterThan(10) should return "10 or Under"
+testGreaterThan(11) should return "Over 10"
+testGreaterThan(99) should return "Over 10"
+testGreaterThan(100) should return "Over 10"
+testGreaterThan(101) should return "Over 100"
+testGreaterThan(150) should return "Over 100"
+You should use the > operator at least twice*/
+function testGreaterThan(val) {
+  if (val > 100) {  // Change this line
+    return "Over 100";
+  }
+  
+  if (val >10) {  // Change this line
+    return "Over 10";
+  }
+
+  return "10 or Under";
+}
+
+// Change this value to test
+testGreaterThan(10);
+```
+## exercise64
+```js
+/*The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
+
+Like the equality operator, greater than or equal to operator will convert data types while comparing.
+
+Examples
+
+6 >= 6 // true
+7 >= '3' // true
+2 >= 3 // false
+'7' >= 9 // false
+*/
+//Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
+/*testGreaterOrEqual(0) should return "Less than 10"
+testGreaterOrEqual(9) should return "Less than 10"
+testGreaterOrEqual(10) should return "10 or Over"
+testGreaterOrEqual(11) should return "10 or Over"
+testGreaterOrEqual(19) should return "10 or Over"
+testGreaterOrEqual(100) should return "20 or Over"
+testGreaterOrEqual(21) should return "20 or Over"
+You should use the >= operator at least twice*/
+
+function testGreaterOrEqual(val) {
+  if (val>=20) {  // Change this line
+    return "20 or Over";
+  }
+  
+  if (val>=10) {  // Change this line
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+// Change this value to test
+testGreaterOrEqual(10);
+```
+## exercise65
+```js
+/*The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, less than operator converts data types while comparing.
+
+Examples
+
+2 < 5 // true
+'3' < 7 // true
+5 < 5 // false
+3 < 2 // false
+'8' < 4 // false
+*/
+//Add the less than operator to the indicated lines so that the return statements make sense.
+/*testLessThan(0) should return "Under 25"
+testLessThan(24) should return "Under 25"
+testLessThan(25) should return "Under 55"
+testLessThan(54) should return "Under 55"
+testLessThan(55) should return "55 or Over"
+testLessThan(99) should return "55 or Over"
+You should use the < operator at least twice*/
+
+function testLessThan(val) {
+  if (val<25) {  // Change this line
+    return "Under 25";
+  }
+  
+  if (val<55) {  // Change this line
+    return "Under 55";
+  }
+
+  return "55 or Over";
+}
+
+// Change this value to test
+testLessThan(10);
+```
+## exercise66
+```js
+/*The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, less than operator converts data types while comparing.
+
+Examples
+
+2 < 5 // true
+'3' < 7 // true
+5 < 5 // false
+3 < 2 // false
+'8' < 4 // false
+*/
+//Add the less than operator to the indicated lines so that the return statements make sense.
+/*testLessThan(0) should return "Under 25"
+testLessThan(24) should return "Under 25"
+testLessThan(25) should return "Under 55"
+testLessThan(54) should return "Under 55"
+testLessThan(55) should return "55 or Over"
+testLessThan(99) should return "55 or Over"
+You should use the < operator at least twice*/
+
+function testLessThan(val) {
+  if (val<25) {  // Change this line
+    return "Under 25";
+  }
+  
+  if (val<55) {  // Change this line
+    return "Under 55";
+  }
+
+  return "55 or Over";
+}
+
+// Change this value to test
+testLessThan(10);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
