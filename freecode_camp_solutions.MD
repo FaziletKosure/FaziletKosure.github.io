@@ -1553,40 +1553,363 @@ testLessThan(10);
 ```
 ## exercise66
 ```js
-/*The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, less than operator converts data types while comparing.
+/*The less than or equal to operator (<=) compares the values of two numbers. If the number to the left is less than or equal to the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false. Like the equality operator, less than or equal to converts data types.
 
 Examples
 
-2 < 5 // true
-'3' < 7 // true
-5 < 5 // false
-3 < 2 // false
-'8' < 4 // false
+4 <= 5 // true
+'7' <= 7 // true
+5 <= 5 // true
+3 <= 2 // false
+'8' <= 4 // false
 */
-//Add the less than operator to the indicated lines so that the return statements make sense.
-/*testLessThan(0) should return "Under 25"
-testLessThan(24) should return "Under 25"
-testLessThan(25) should return "Under 55"
-testLessThan(54) should return "Under 55"
-testLessThan(55) should return "55 or Over"
-testLessThan(99) should return "55 or Over"
-You should use the < operator at least twice*/
+//Add the less than or equal to operator to the indicated lines so that the return statements make sense
+/*testLessOrEqual(0) should return "Smaller Than or Equal to 12"
+testLessOrEqual(11) should return "Smaller Than or Equal to 12"
+testLessOrEqual(12) should return "Smaller Than or Equal to 12"
+testLessOrEqual(23) should return "Smaller Than or Equal to 24"
+testLessOrEqual(24) should return "Smaller Than or Equal to 24"
+testLessOrEqual(25) should return "More Than 24"
+testLessOrEqual(55) should return "More Than 24"
+You should use the <= operator at least twice*/
 
-function testLessThan(val) {
-  if (val<25) {  // Change this line
-    return "Under 25";
+function testLessOrEqual(val) {
+  if (val<=12) {  // Change this line
+    return "Smaller Than or Equal to 12";
   }
   
-  if (val<55) {  // Change this line
-    return "Under 55";
+  if (val<=24) {  // Change this line
+    return "Smaller Than or Equal to 24";
   }
 
-  return "55 or Over";
+  return "More Than 24";
 }
 
 // Change this value to test
-testLessThan(10);
+testLessOrEqual(10);
+
 ```
+## exercise67
+```js
+/*Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+
+The same effect could be achieved by nesting an if statement inside another if:
+
+if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No";
+will only return "Yes" if num is greater than 5 and less than 10. The same logic can be written as:
+
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
+*/
+//Combine the two if statements into one statement which will return "Yes" if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return "No".
+/*You should use the && operator once
+Passed
+You should only have one if statement
+Passed
+testLogicalAnd(0) should return "No"
+Passed
+testLogicalAnd(24) should return "No"
+Passed
+testLogicalAnd(25) should return "Yes"
+Passed
+testLogicalAnd(30) should return "Yes"
+Passed
+testLogicalAnd(50) should return "Yes"
+Passed
+testLogicalAnd(51) should return "No"
+Passed
+testLogicalAnd(75) should return "No"
+Passed
+testLogicalAnd(80) should return "No"*/
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val>=25 && val<=50) {
+    
+      return "Yes";
+    
+  }
+
+  // Only change code above this line
+  return "No";
+}
+
+// Change this value to test
+testLogicalAnd(10);
+
+```
+## exercise68
+```js
+/*The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+
+The logical or operator is composed of two pipe symbols (|). This can typically be found between your Backspace and Enter keys.
+
+The pattern below should look familiar from prior waypoints:
+
+if (num > 10) {
+  return "No";
+}
+if (num < 5) {
+  return "No";
+}
+return "Yes";
+will return "Yes" only if num is between 5 and 10 (5 and 10 included). The same logic can be written as:
+
+if (num > 10 || num < 5) {
+  return "No";
+}
+return "Yes";
+
+*/
+//Combine the two if statements into one statement which returns "Outside" if val is not between 10 and 20, inclusive. Otherwise, return "Inside".
+/*You should use the || operator once
+You should only have one if statement
+testLogicalOr(0) should return "Outside"
+testLogicalOr(9) should return "Outside"
+testLogicalOr(10) should return "Inside"
+testLogicalOr(15) should return "Inside"
+testLogicalOr(19) should return "Inside"
+testLogicalOr(20) should return "Inside"
+testLogicalOr(21) should return "Outside"
+testLogicalOr(25) should return "Outside"*/
+
+function testLogicalOr(val) {
+  // Only change code below this line
+
+  if (val>20 || val<10) {
+    return "Outside";
+ 
+  }
+
+  // Only change code above this line
+  return "Inside";
+}
+
+// Change this value to test
+testLogicalOr(15);
+
+```
+## exercise69
+```js
+/*When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
+
+if (num > 10) {
+  return "Bigger than 10";
+} else {
+  return "10 or Less";
+}
+
+
+*/
+//Combine the if statements into a single if/else statement.
+/*You should only have one if statement in the editor
+Passed
+You should use an else statement
+Passed
+testElse(4) should return "5 or Smaller"
+Passed
+testElse(5) should return "5 or Smaller"
+Passed
+testElse(6) should return "Bigger than 5"
+Passed
+testElse(10) should return "Bigger than 5"
+Passed
+Do not change the code above or below the lines.*/
+
+function testElse(val) {
+  var result = "";
+  // Only change code below this line
+  
+  if (val > 5) {
+    result = "Bigger than 5";
+  }
+  
+  else {
+    result = "5 or Smaller";
+  }
+  
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+testElse(4);
+
+```
+## exercise70
+```js
+/*If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+
+if (num > 15) {
+  return "Bigger than 15";
+} else if (num < 5) {
+  return "Smaller than 5";
+} else {
+  return "Between 5 and 15";
+}
+*/
+//Convert the logic to use else if statements.
+/*You should have at least two else statements
+You should have at least two if statements
+You should have closing and opening curly braces for each condition
+testElseIf(0) should return "Smaller than 5"
+testElseIf(5) should return "Between 5 and 10"
+testElseIf(7) should return "Between 5 and 10"
+testElseIf(10) should return "Between 5 and 10"
+testElseIf(12) should return "Greater than 10"*/
+
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  }
+  
+   else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+  
+  return "Between 5 and 10";
+}
+}
+
+
+testElseIf(5);
+testElseIf(10);
+
+```
+## exercise71
+```js
+/*Order is important in if, else if statements.
+
+The function is executed from top to bottom so you will want to be careful of what statement comes first.
+
+Take these two functions as an example.
+
+Here's the first:
+
+function foo(x) {
+  if (x < 1) {
+    return "Less than one";
+  } else if (x < 2) {
+    return "Less than two";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
+And the second just switches the order of the statements:
+
+function bar(x) {
+  if (x < 2) {
+    return "Less than two";
+  } else if (x < 1) {
+    return "Less than one";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
+While these two functions look nearly identical if we pass a number to both we get different outputs.
+
+foo(0) // "Less than one"
+bar(0) // "Less than two"
+
+*/
+//Change the order of logic in the function so that it will return the correct statements in all cases.
+/*orderMyLogic(4) should return "Less than 5"
+Passed
+orderMyLogic(6) should return "Less than 10"
+Passed
+orderMyLogic(11) should return "Greater than or equal to 10"*/
+
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+// Change this value to test
+orderMyLogic(10);
+orderMyLogic(4);
+
+
+```
+## exercise72
+```js
+/*if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if / else if statements:
+
+if (condition1) {
+  statement1
+} else if (condition2) {
+  statement2
+} else if (condition3) {
+  statement3
+. . .
+} else {
+  statementN
+}
+*/
+//Write chained if/else if statements to fulfill the following conditions:
+
+/*num < 5 - return "Tiny"
+num < 10 - return "Small"
+num < 15 - return "Medium"
+num < 20 - return "Large"
+num >= 20 - return "Huge"*/
+/*You should have at least four else statements
+You should have at least four if statements
+You should have at least one return statement
+testSize(0) should return "Tiny"
+testSize(4) should return "Tiny"
+testSize(5) should return "Small"
+testSize(8) should return "Small"
+testSize(10) should return "Medium"
+testSize(14) should return "Medium"
+testSize(15) should return "Large"
+testSize(17) should return "Large"
+testSize(20) should return "Huge"
+testSize(25) should return "Huge"
+*/
+
+function testSize(num) {
+  // Only change code below this line
+  if (num<5){
+     return "Tiny";
+  } else if ( num<10) {
+    return "Small";
+  } else if (num<15){
+return "Medium";
+  }
+  else if (num<20) {
+     return "Large";
+  }
+  else {
+    return "Huge";
+  }
+  
+  return "Change Me";
+  // Only change code above this line
+}
+
+// Change this value to test
+testSize(7);
+```
+
+
+
+
+
+
+
 
 
 
