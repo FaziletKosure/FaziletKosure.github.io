@@ -494,6 +494,533 @@ var someAdjective="cool and easy";
 var myStr = "Learning to code is ";
 myStr+=someAdjective;
 ```
+## exercise29 
+```js
+/*You can find the length of a String value by writing .length after the string variable or string literal.
+
+"Alan Peter".length; // 10
+For example, if we created a variable var firstName = "Charles", we could find out how long the string "Charles" is by using the firstName.length property.
+*/
+//Use the .length property to count the number of characters in the lastName variable and assign it to lastNameLength..
+/*lastNameLength should be equal to eight.
+You should be getting the length of lastName by using .length like this: lastName.length.*/
+// Example
+var firstNameLength = 0;
+var firstName = "Ada";
+
+firstNameLength = firstName.length;
+
+// Setup
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+// Only change code below this line.
+var lastNameLength = 8;
+lastNameLength = lastName;
+lastNameLength = lastName.length;
+```
+## exercise30 
+```js
+/*Bracket notation is a way to get a character at a specific index within a string.
+
+Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as Zero-based indexing.
+
+For example, the character at index 0 in the word "Charles" is "C". So if var firstName = "Charles", you can get the value of the first letter of the string by using firstName[0].
+*/
+//Use bracket notation to find the first character in the lastName variable and assign it to firstLetterOfLastName.
+
+/*Hint
+Try looking at the firstLetterOfFirstName variable declaration if you get stuck.*/
+// Example
+var firstLetterOfFirstName = "";
+var firstName = "Ada";
+
+firstLetterOfFirstName = firstName[0];
+
+// Setup
+var firstLetterOfLastName = "";
+var lastName = "Lovelace";
+
+// Only change code below this line
+firstLetterOfLastName = lastName[0];
+```
+## exercise31 
+```js
+/*In JavaScript, String values are immutable, which means that they cannot be altered once created.
+
+For example, the following code:
+
+var myStr = "Bob";
+myStr[0] = "J";
+cannot change the value of myStr to "Job", because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
+
+var myStr = "Bob";
+myStr = "Job";*/
+//Correct the assignment to myStr so it contains the string value of Hello World using the approach shown in the example above.
+/*Correct the assignment to myStr so it contains the string value of Hello World using the approach shown in the example above.*/
+/ Setup
+var myStr = "Jello World";
+
+// Only change code below this line
+myStr = "Hello World"; // Fix Me
+```
+## exercise32 
+```js
+/*You can also use bracket notation to get the character at other positions within a string.
+
+Remember that computers start counting at 0, so the first character is actually the zeroth character.
+
+Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.*/
+//Try looking at the secondLetterOfFirstName variable declaration if you get stuck.
+/*The thirdLetterOfLastName variable should have the value of v.
+You should use bracket notation.*/
+// Example
+var firstName = "Ada";
+var secondLetterOfFirstName = firstName[1];
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line.
+var thirdLetterOfLastName = lastName[2];
+```
+## exercise33 
+```js
+/*In order to get the last letter of a string, you can subtract one from the string's length.
+
+For example, if var firstName = "Charles", you can get the value of the last letter of the string by using firstName[firstName.length - 1].*/
+//Use bracket notation to find the last character in the lastName variable.
+/*Try looking at the lastLetterOfFirstName variable declaration if you get stuck.lastLetterOfLastName should be "e".
+You have to use .length to get the last letter.*/
+// Example
+var firstName = "Ada";
+var lastLetterOfFirstName = firstName[firstName.length - 1];
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line.
+var lastLetterOfLastName = lastName[lastName.length -1];
+```
+## exercise34 
+```js
+/*You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.
+
+For example, you can get the value of the third-to-last letter of the var firstName = "Charles" string by using firstName[firstName.length - 3]*/
+//Use bracket notation to find the second-to-last character in the lastName string.
+/*Try looking at the thirdToLastLetterOfFirstName variable declaration if you get stuck.secondToLastLetterOfLastName should be "c".
+Passed
+You have to use .length to get the second last letter.*/
+// Example
+var firstName = "Ada";
+var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var secondToLastLetterOfLastName = lastName[lastName.length -2];
+```
+## exercise35 
+```js
+/*We will now use our knowledge of strings to build a "Mad Libs" style word game we're calling "Word Blanks". You will create an (optionally humorous) "Fill in the Blanks" style sentence.
+
+In a "Mad Libs" game, you are provided sentences with some missing words, like nouns, verbs, adjectives and adverbs. You then fill in the missing pieces with words of your choice in a way that the completed sentence makes sense.
+
+Consider this sentence - "It was really ____, and we ____ ourselves ____". This sentence has three missing pieces- an adjective, a verb and an adverb, and we can add words of our choice to complete it. We can then assign the completed sentence to a variable as follows:
+
+var sentence = "It was really" + "hot" + ", and we" + "laughed" + "ourselves" + "silly.";
+*/
+//Use bracket notation to find the second-to-last character in the lastName string.
+/*wordBlanks("","","","") should return a string.
+Passed
+wordBlanks("dog", "big", "ran", "quickly") should contain all of the passed in words separated by non-word characters (and any additional words in your madlib).
+Passed
+wordBlanks("cat", "little", "hit", "slowly") should contain all of the passed in words separated by non-word characters (and any additional words in your madlib).*/
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  // Your code below this line
+  var result = "";
+  result= "My "+myNoun+" is "+myAdjective+" and it "+myVerb+" "+myAdverb+".";
+   result=`My ${myNoun} is ${myAdjective} and it ${myVerb} ${myAdverb}.`;
+
+  // Your code above this line
+  return result;
+}
+
+// Change the words here to test your function
+wordBlanks("cat", "little", "hit", "slowly");
+```
+## exercise36 
+```js
+/*With JavaScript array variables, we can store several pieces of data in one place.
+
+You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
+
+var sandwich = ["peanut butter", "jelly", "bread"].
+*/
+//Modify the new array myArray so that it contains both a string and a number (in that order).
+/*myArray should be an array.
+The first item in myArray should be a string.
+The second item in myArray should be a number.*/
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  // Example
+var ourArray = ["John", 23];
+
+// Only change code below this line.
+var myArray = ["Fazilet", 34];
+```
+## exercise37 
+```js
+/*You can also nest arrays within other arrays, like this: [["Bulls", 23], ["White Sox", 45]]. This is also called a Multi-dimensional Array.
+*/
+//Create a nested array called myArray.
+/*myArray should have at least one array nested within another array.*/
+  // Example
+var ourArray = [["the universe", 42], ["everything", 101010]];
+
+// Only change code below this line.
+var myArray = [["Bulls", 23], ["White Sox", 45]];
+
+```
+## exercise38 
+```js
+/*We can access the data inside arrays using indexes.
+
+Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use zero-based indexing, so the first element in an array is element 0.
+
+Example
+
+var array = [50,60,70];
+array[0]; // equals 50
+var data = array[1]; // equals 60
+Note
+There shouldn't be any spaces between the array name and the square brackets, like array [0]. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+
+*/
+//Create a variable called myData and set it to equal the first value of myArray using bracket notation.
+/*The variable myData should equal the first value of myArray.
+The data in variable myArray should be accessed using bracket notation.*/
+ // Example
+var ourArray = [50,60,70];
+var ourData = ourArray[0]; // equals 50
+
+// Setup
+var myArray = [50,60,70];
+
+// Only change code below this line.
+var myData = myArray[0];
+
+```
+## exercise39 
+```js
+/*Unlike strings, the entries of arrays are mutable and can be changed freely.
+
+Example
+
+var ourArray = [50,40,30];
+ourArray[0] = 15; // equals [15,40,30]
+Note
+There shouldn't be any spaces between the array name and the square brackets, like array [0]. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+*/
+//Modify the data stored at index 0 of myArray to a value of 45.
+/*myArray should now be [45,64,99].
+Passed
+You should be using correct index to modify the value in myArray.*/
+ // Example
+var ourArray = [18,64,99];
+ourArray[1] = 45; // ourArray now equals [18,45,99].
+
+// Setup
+var myArray = [18,64,99];
+
+// Only change code below this line.
+myArray[0] = 45;
+```
+## exercise40 
+```js
+/*One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
+
+Example
+
+var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11
+Note
+There shouldn't be any spaces between the array name and the square brackets, like array [0][0] and even this array [0] [0] is not allowed. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+*/
+//Using bracket notation select an element from myArray such that myData is equal to 8.
+/*myData should be equal to 8.
+You should be using bracket notation to read the correct value from myArray.*/
+// Setup
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+// Only change code below this line.
+var myData = myArray[2][1];
+
+```
+## exercise41 
+```js
+/*An easy way to append data to the end of an array is via the push() function.
+
+.push() takes one or more parameters and "pushes" them onto the end of the array.
+
+var arr = [1,2,3];
+arr.push(4);
+// arr is now [1,2,3,4]
+*/
+//Push ["dog", 3] onto the end of the myArray variable.
+/*myArray should now equal [["John", 23], ["cat", 2], ["dog", 3]].*/
+// Example
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.push(["happy", "joy"]); 
+// ourArray now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
+
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line.
+
+myArray.push (["dog", 3]);
+
+```
+## exercise42 
+```js
+/*Another way to change the data in an array is with the .pop() function.
+
+.pop() is used to "pop" a value off of the end of an array. We can store this "popped off" value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+
+Any type of entry can be "popped" off of an array - numbers, strings, even nested arrays.
+
+var threeArr = [1, 4, 6];
+var oneDown = threeArr.pop();
+console.log(oneDown); // Returns 6
+console.log(threeArr); // Returns [1, 4]
+*/
+//Use the .pop() function to remove the last item from myArray, assigning the "popped off" value to removedFromMyArray.
+/*myArray should only contain [["John", 23]].
+Use pop() on myArray
+removedFromMyArray should only contain ["cat", 2].*/
+// Example
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop(); 
+// removedFromOurArray now equals 3, and ourArray now equals [1,2]
+
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line.
+var removedFromMyArray = myArray.pop();
+
+```
+## exercise43 
+```js
+/*pop() always removes the last element of an array. What if you want to remove the first?
+
+That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
+*/
+//Use the .shift() function to remove the first item from myArray, assigning the "shifted off" value to removedFromMyArray.
+/*myArray should now equal [["dog", 3]].
+removedFromMyArray should contain ["John", 23].*/
+// Example
+var ourArray = ["Stimpson", "J", ["cat"]];
+var removedFromOurArray = ourArray.shift();
+// removedFromOurArray now equals "Stimpson" and ourArray now equals ["J", ["cat"]].
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line.
+var removedFromMyArray = myArray.shift();
+
+```
+## exercise44 
+```js
+/*Create a shopping list in the variable myList. The list should be a multi-dimensional array containing several sub-arrays.
+
+The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.
+
+["Chocolate Bar", 15]
+*/
+//There should be at least 5 sub-arrays in the list.
+/*myList should be an array
+The first elements in each of your sub-arrays must all be strings
+The second elements in each of your sub-arrays must all be numbers
+You must have at least 5 items in your list*/
+// Example
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift(); // ourArray now equals ["J", "cat"]
+ourArray.unshift("Happy"); 
+// ourArray now equals ["Happy", "J", "cat"]
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+
+// Only change code below this line.
+myArray.unshift( ["Paul",35]);
+
+```
+## exercise45 
+```js
+/*Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.
+
+.unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+*/
+//Add ["Paul",35] to the beginning of the myArray variable using unshift().
+/*myArray should now have [["Paul", 35], ["dog", 3]].*/
+// Example
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift(); // ourArray now equals ["J", "cat"]
+ourArray.unshift("Happy"); 
+// ourArray now equals ["Happy", "J", "cat"]
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+
+// Only change code below this line.
+myArray.unshift( ["Paul",35]);
+
+```
+## exercise46 
+```js
+/*Create a shopping list in the variable myList. The list should be a multi-dimensional array containing several sub-arrays.
+
+The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.
+
+["Chocolate Bar", 15]
+*/
+//There should be at least 5 sub-arrays in the list.
+/*myList should be an array
+Passed
+The first elements in each of your sub-arrays must all be strings
+Passed
+The second elements in each of your sub-arrays must all be numbers
+Passed
+You must have at least 5 items in your list.*/
+var myList = [["dog",5], ["cat",1],  ["bird",2], ["monkey",3], ["sparrow",4]];
+
+```
+
+## exercise48 
+```js
+/*Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+
+Here is a function with two parameters, param1 and param2:
+
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+Then we can call testFun:
+
+testFun("Hello", "World");
+
+We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
+*/
+//Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.Call the function with two numbers as arguments.
+/*functionWithArgs should be a function
+Passed
+functionWithArgs(1,2) should output 3
+Passed
+functionWithArgs(7,9) should output 16
+Passed
+Call functionWithArgs with two numbers after you define it.*/
+// Example
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+ourFunctionWithArgs(10, 5); // Outputs 5
+
+// Only change code below this line.
+function functionWithArgs(a, b) {
+  console.log(a+b);
+}
+functionWithArgs(1,2);
+functionWithArgs(7,9);
+
+}
+```
+## exercise47 
+```js
+/*In JavaScript, we can divide up our code into reusable parts called functions.
+
+Here's an example of a function:
+
+function functionName() {
+  console.log("Hello World");
+}
+You can call or invoke this function by using its name followed by parentheses, like this:
+
+functionName();
+
+Each time the function is called it will print out the message "Hello World" on the dev console. All of the code between the curly braces will be executed every time the function is called.
+*/
+//Create a function called reusableFunction which prints "Hi World" to the dev console.Call the function.
+/*reusableFunction should be a function
+reusableFunction should output "Hi World" to the dev console
+Call reusableFunction after you define it*/
+// Example
+function ourReusableFunction() {
+  console.log("Heyya, World");
+}
+
+ourReusableFunction();
+
+// Only change code below this line
+function reusableFunction() {
+    console.log("Hi World");
+}
+reusableFunction();
+
+```
+## exercise49
+```js
+/*Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+
+Here is a function with two parameters, param1 and param2:
+
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+Then we can call testFun:
+
+testFun("Hello", "World");
+
+We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
+*/
+//Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.Call the function with two numbers as arguments.
+/*functionWithArgs should be a function
+Passed
+functionWithArgs(1,2) should output 3
+Passed
+functionWithArgs(7,9) should output 16
+Passed
+Call functionWithArgs with two numbers after you define it.*/
+// Example
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+ourFunctionWithArgs(10, 5); // Outputs 5
+
+// Only change code below this line.
+function functionWithArgs(a, b) {
+  console.log(a+b);
+}
+functionWithArgs(1,2);
+functionWithArgs(7,9);
+
+}
+```
+
+
+
+
 
 
 
