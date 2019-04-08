@@ -981,42 +981,84 @@ reusableFunction();
 ```
 ## exercise49
 ```js
-/*Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+/*In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
 
-Here is a function with two parameters, param1 and param2:
-
-function testFun(param1, param2) {
-  console.log(param1, param2);
-}
-Then we can call testFun:
-
-testFun("Hello", "World");
-
-We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
+Variables which are used without the var keyword are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with var.
 */
-//Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.Call the function with two numbers as arguments.
-/*functionWithArgs should be a function
-Passed
-functionWithArgs(1,2) should output 3
-Passed
-functionWithArgs(7,9) should output 16
-Passed
-Call functionWithArgs with two numbers after you define it.*/
-// Example
-function ourFunctionWithArgs(a, b) {
-  console.log(a - b);
-}
-ourFunctionWithArgs(10, 5); // Outputs 5
+//Using var, declare a global variable myGlobal outside of any function. Initialize it with a value of 10.
 
-// Only change code below this line.
-function functionWithArgs(a, b) {
-  console.log(a+b);
-}
-functionWithArgs(1,2);
-functionWithArgs(7,9);
+//Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
+/*fmyGlobal should be defined
+myGlobal should have a value of 10
+myGlobal should be declared using the var keyword
+oopsGlobal should be a global variable and have a value of 5*/
+var myGlobal = 10;
 
+function fun1() {
+  // Assign 5 to oopsGlobal Here
+  oopsGlobal=5;
+}
+
+// Only change code above this line
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
 }
 ```
+## exercise50
+```js
+/*Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
+
+Here is a function myTest with a local variable called loc.
+
+function myTest() {
+  var loc = "foo";
+  console.log(loc);
+}
+myTest(); // logs "foo"
+console.log(loc); // loc is not defined
+loc is not defined outside of the function.
+*/
+//No global myVar variable Passed
+//Add a local myVar variable
+function myLocalScope() {
+  'use strict'; // you shouldn't need to edit this line
+ var myVar = 5;
+  console.log(myVar);
+}
+myLocalScope();
+```
+## exercise51
+```js
+/*Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
+
+Here is a function myTest with a local variable called loc.
+
+function myTest() {
+  var loc = "foo";
+  console.log(loc);
+}
+myTest(); // logs "foo"
+console.log(loc); // loc is not defined
+loc is not defined outside of the function.
+*/
+//No global myVar variable Passed
+//Add a local myVar variable
+function myLocalScope() {
+  'use strict'; // you shouldn't need to edit this line
+ var myVar = 5;
+  console.log(myVar);
+}
+myLocalScope();
+```
+
+
 
 
 
