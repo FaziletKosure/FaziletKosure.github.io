@@ -115,7 +115,7 @@ the fix:
 let myArray = [1, 2, 3];
 
 ```
-## missing arguments
+### missing arguments
 broken code:
 ```js
 function getNine {
@@ -174,4 +174,61 @@ classification:
 
 the fix:
 ```js
+let nested_messages = "remind yourself 'i can do this!' at least once a day";
+```
+### reassigning to constant
+broken code:
+```js
+const a = 9;
+a = 0;
+```
+error message:
+```
+TypeError: Assignment to constant variable.
+```
+classification:
+* execution phase 
+* semanitc 
+
+the fix:
+```js
+const a = 9;
+const b = 0;
+```
+### unassigned const declaration
+broken code:
+```js
+const a;
+a = 0;
+```
+error message:
+```
+SyntaxError: Missing initializer in const declaration
+```
+classification:
+* creation phase 
+* syntax 
+
+the fix:
+```js
+const a = 0;
+```
+### is not a function
+broken code:
+```js
+let array = [];
+array.length()
+```
+error message:
+```
+TypeError: array.length is not a function
+```
+classification:
+* execution phase 
+* semanitc 
+
+the fix:
+```js
+let array = [];
+array.length
 ```
