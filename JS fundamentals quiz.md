@@ -47,7 +47,7 @@ let x = z[y];
 
 1. Index
 2. Key
-3. Index or key
+3.* ## Index or key
 4. Array
 
 ----
@@ -62,7 +62,7 @@ let z = x[y];
 
 **5. What is `y`?**
 
-1. Index
+1.* ## Index
 2. Key
 3. Index or key
 4. Array
@@ -83,7 +83,7 @@ let joesAge = joe['age'];
 **6. What is `'age'` in the last line?**
 
 1. Index
-2. Key
+2.* ## Key
 3. Array
 4. Object
 
@@ -106,14 +106,16 @@ let z = x[y];
 
 **7. What is `y`**
 
-1. Index
+1.* ## Index
 2. Key
 3. Index or key
 4. Array
 
-**8. What is the element for index `1` in array `x`?**
+**8. What is the element for index `1` in array `x`?** ### 2
 
 **9. Fill in: "The value of the (...) `length` of `x` is (...)"**
+
+**9. Fill in: "The value of the (.y.) `length` of `x` is (.3.)"**
 
 ----
 
