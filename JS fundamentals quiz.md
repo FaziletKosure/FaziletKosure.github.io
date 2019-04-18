@@ -10,19 +10,19 @@ let l = s.length;
 
 **1. What are the types of the following:**
 
-1. `s`
-2. `x`
+1. `s` is a variable and the variable `s` is a string.
+2. `x` is a variable and the variable `x` is a string.
 3. `s.toLowerCase()`
 4. `s.toLowerCase`
 5. `s.length`
-6. `l`
+6. `l` is a variable and the variable `l` is a number.
 
 ----
 
 ### 2. In `let x = 5 + 6;`, what is `+`?
 
 1. Function
-2. Operator
+2. * ## Operator
 3. Number
 4. Aggregator
 
@@ -31,7 +31,7 @@ let l = s.length;
 ### 3. In `let x = 5 + 6;`, what is `let`?
 
 1. Variable
-2. Keyword
+2. * ## Keyword
 3. Operator
 4. Constant
 
@@ -92,7 +92,7 @@ let joesAge = joe['age'];
 1. Index
 2. Key
 3. Object
-4. Property
+4. * ## Property
 
 ----
 
