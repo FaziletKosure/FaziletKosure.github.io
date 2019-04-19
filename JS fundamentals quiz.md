@@ -121,36 +121,64 @@ let z = x[y];
 
 ### 10. What is the name of these functions?
 
-1. `function a() { return true; }`
-2. `let a = function b() { return true; }`
-3. `let c = function () { return true; }`
+1. `function a() { return true; }` * ## function's name `a`
+2. `let a = function b() { return true; }` * ## function's name `b`
+3. `let c = function () { return true; }` * ## this function has got no name
 
 ----
 
 ### 11. Write a function that has two parameters called `first` and `second`
 
+```js
+function x(first, second) {return first + second;}
+```
 ----
 
 ### 12. Write a function call that passes three arguments.
+
+```js
+function a(x,y,z){return x+y-z;}
+a(3,5,1)//expected output=>3+5-1=7
+```
 
 ----
 
 ### 13. Write code for the following
 
 1. Declare a variable called `x` and initialize it with the string "Hello".
+```js
+let x = "Hello";
+```
 2. Declare a variable called `y` and initialize it with the property `length` of `x`.
+```js
+let y = x.length;
+```
 3. Declare a variable called `z` and initialize it with the result of calling the method `toUpperCase` on `x`
+```js
+let z = x.toUpperCase();
 4. Declare a function called `myFunction`. This function should take two arguments, and should call the second argument with the first argument as its argument. Then, declare a variable called `f` and initialize it with an empty anonymous function, and call `myFunction` with the arguments `10` and `f`.
+```js
+function myFunction(a, b) { return a * b;}
+myFunction(7, 7);
+let f = function();
+myFunction(10, f);
+```
 
 ----
 
 ### 14. Explain as precisely as possible (in English) what the following code does, line by line
 
 (Tip: it should look like the items in the previous question!)
-
+1. Declare a variable called `s` and initialize it with the string "HackYourFuture"
 ```js
 let s = "HackYourFuture";
+```
+2. Declare a variable called "i" and initialize it with the result of calling the method indexOf  with "Your" as argument on `x`.
+```js
 let i = s.indexOf("Your");
+```
+3. Declare a function called `sum`. This function should take two Statements, and should call the second argument with the first argument as its argument. Then, declare a variable called `s` and initialize it with two arguments function, and Then, declare a variable called `r` and initialize it with a Math.sqrt(s).
+```js
 function sum(a, b) { return a + b; }
 let s = sum(4, 5);
 let r = Math.sqrt(s);
