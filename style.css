@@ -16,7 +16,7 @@ input[type="radio"] {
 /* input[type="radio"] {
   display: none;
 } */
-input[type="radio"] + *::before {
+label + input[type="radio"] + *::before {
   content: "";
   display: inline-block;
   vertical-align: bottom;
@@ -28,7 +28,7 @@ input[type="radio"] + *::before {
   border-width: 0.1rem;
   border-color: gray;
 }
-input[type="radio"]:checked + *::before {
+label + input[type="radio"]:checked + *::before {
   background: radial-gradient(
     black 0%,
     black 40%,
@@ -37,6 +37,6 @@ input[type="radio"]:checked + *::before {
   );
   border-color: black;
 }
-input[type="radio"]:checked + * {
+label + input[type="radio"]:checked + * {
   color: black;
 }
